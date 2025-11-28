@@ -37,11 +37,9 @@ export default function Section({
           </>
         )}
         {title && (
-          <div className="relative">
-            <h2 className="text-xs font-semibold text-muted-foreground uppercase tracking-widest">
-              {title}
-            </h2>
-          </div>
+          <h2 className="select-none text-xs font-semibold text-muted-foreground uppercase tracking-widest">
+            {title}
+          </h2>
         )}
         <div className={clsx(className, "py-6")}>{children}</div>
       </div>

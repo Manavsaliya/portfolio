@@ -1,4 +1,4 @@
-import { RiArrowDownSLine, RiArrowUpSLine } from "@remixicon/react";
+import { RiArrowDownLine, RiArrowUpLine } from "@remixicon/react";
 
 export type PointType = "start" | "continue" | "end";
 
@@ -17,6 +17,7 @@ export default function ExperienceTimeline({
   if (isFirst) {
     topType = "end";
   }
+
   if (isLast) {
     bottomType = "start";
   }
@@ -28,12 +29,12 @@ export default function ExperienceTimeline({
           <div className="w-2.5 h-2.5 rounded-full border-2 border-foreground" />
         );
       case "continue":
-        return <div className="w-2 h-0.5 bg-foreground" />;
+        return <div className="w-2 h-[1.6px] bg-foreground" />;
       case "end":
         return isTop ? (
-          <RiArrowUpSLine size={20} className="text-foreground" />
+          <RiArrowUpLine size={19} className="text-foreground -mb-1" />
         ) : (
-          <RiArrowDownSLine size={20} className="text-foreground" />
+          <RiArrowDownLine size={19} className="text-foreground -mt-1" />
         );
       default:
         return null;
@@ -42,17 +43,9 @@ export default function ExperienceTimeline({
 
   return (
     <div className="flex flex-col items-center w-5">
-      {topType && (
-        <div className="flex items-center justify-center">
-          {renderPoint(topType, true)}
-        </div>
-      )}
-      <div className="w-[1.6px] h-full bg-border" />
-      {bottomType && (
-        <div className="flex items-center justify-center">
-          {renderPoint(bottomType)}
-        </div>
-      )}
+      {topType && renderPoint(topType, true)}
+      <div className="w-0.5 flex-1 bg-border" />
+      {bottomType && renderPoint(bottomType)}
     </div>
   );
 }

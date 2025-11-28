@@ -1,9 +1,9 @@
 "use client";
 
 import { EXPERIENCE } from "@/constants/experience";
-import Section from "./section";
-import ExperienceTimeline from "./experience-timeline";
 import { calculateDuration, formatDate } from "@/lib/utils";
+import ExperienceTimeline from "./experience-timeline";
+import Section from "./section";
 
 export default function ExperienceSection() {
   const sortedExperiences = [...EXPERIENCE].sort((a, b) => {
@@ -45,7 +45,7 @@ export default function ExperienceSection() {
                     </>
                   )}
                 </div>
-                <ul className="space-y-2 pt-2">
+                <ul className="space-y-2 pt-2 tracking-wide">
                   {exp.bullets.map((bullet, idx) => (
                     <li
                       key={idx}

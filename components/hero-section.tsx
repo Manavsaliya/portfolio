@@ -1,14 +1,14 @@
 "use client";
 
-import Image from "next/image";
-import Section from "./section";
 import {
-  RiMailLine,
+  RemixiconComponentType,
   RiGithubLine,
   RiLinkedinLine,
-  RemixiconComponentType,
+  RiMailLine,
   RiTwitterXLine,
 } from "@remixicon/react";
+import Image from "next/image";
+import Section from "./section";
 
 const SOCIALS: {
   name: string;
@@ -17,22 +17,22 @@ const SOCIALS: {
 }[] = [
   {
     name: "Email",
-    href: "mailto:manav@example.com",
+    href: "mailto:manavsaliya12@gmail.com",
     icon: RiMailLine,
   },
   {
     name: "GitHub",
-    href: "https://github.com",
+    href: "https://github.Manavsaliya",
     icon: RiGithubLine,
   },
   {
     name: "LinkedIn",
-    href: "https://linkedin.com",
+    href: "https://linkedin.com/manavsaliya12",
     icon: RiLinkedinLine,
   },
   {
     name: "X",
-    href: "https://x.com",
+    href: "https://x.com/manavsaliya12",
     icon: RiTwitterXLine,
   },
 ];
@@ -42,12 +42,12 @@ export default function HeroSection() {
     <Section isTop={true}>
       <div className="flex gap-8 items-center">
         <div className="shrink-0">
-          <div className="relative w-32 h-32 rounded-lg overflow-hidden border-2 border-border">
+          <div className="relative select-none w-32 h-32 rounded-lg overflow-hidden border-2 border-border">
             <Image
               src="/images/profile.jpg?height=128&width=128"
               alt="Manav Saliya"
               fill
-              className="object-cover"
+              className="object-cover pointer-events-none"
             />
           </div>
         </div>
@@ -55,23 +55,33 @@ export default function HeroSection() {
         {/* Name, quote on right side */}
         <div className="flex-1 space-y-3">
           <div>
-            <h1 className="text-4xl font-bold text-foreground">Manav Saliya</h1>
-            <p className="text-lg text-primary font-semibold mt-2">
-              Full-stack developer crafting fast, scalable, and user-focused web
-              apps.
+            <h1 className="text-3xl sm:text-4xl font-bold text-foreground">
+              Manav Saliya
+            </h1>
+            <p className="max-sm:hidden text-lg text-primary font-semibold mt-2">
+              Crafting modern web apps with Laravel, React & Next.js ⚡
             </p>
           </div>
-          <p className="text-sm text-muted-foreground italic">
+          <p className="max-sm:hidden text-sm text-muted-foreground italic">
             "Building elegant solutions to complex problems."
           </p>
         </div>
+      </div>
+
+      <div className="space-y-2 mt-3">
+        <p className="sm:hidden text-md text-primary font-semibold mt-2">
+          Crafting modern web apps with Laravel, React & Next.js ⚡
+        </p>
+        <p className="sm:hidden text-sm text-muted-foreground italic">
+          "Building elegant solutions to complex problems."
+        </p>
       </div>
 
       <div className="flex gap-4 mt-8">
         {SOCIALS.map((social) => {
           return (
             <a
-              key={social.name}
+              key={social.href}
               href={social.href}
               target={social.name !== "Email" ? "_blank" : undefined}
               rel={social.name !== "Email" ? "noopener noreferrer" : undefined}

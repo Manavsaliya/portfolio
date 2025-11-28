@@ -1,14 +1,7 @@
 "use client";
 
+import { Project } from "@/constants/projects";
 import { RiExternalLinkLine, RiGithubLine } from "@remixicon/react";
-
-interface ProjectCardProps {
-  name: string;
-  oneLiner: string;
-  bullets: string[];
-  link?: string;
-  github_link?: string;
-}
 
 const Plus = () => {
   return (
@@ -36,7 +29,7 @@ export default function ProjectCard({
   bullets,
   link,
   github_link,
-}: ProjectCardProps) {
+}: Project) {
   return (
     <div className="relative py-4 px-4 space-y-3 border-b border-x first:border-t border-border hover:bg-muted/40 dark:hover:bg-muted/20">
       <div className="absolute -top-2 -left-2 text-muted-foreground text-xs">
@@ -55,7 +48,9 @@ export default function ProjectCard({
       <div className="flex items-start justify-between gap-3">
         <div className="flex-1">
           <h3 className="text-base font-semibold text-foreground">{name}</h3>
-          <p className="text-sm text-muted-foreground mt-1">{oneLiner}</p>
+          {oneLiner && (
+            <p className="text-sm text-muted-foreground mt-1">{oneLiner}</p>
+          )}
         </div>
         <div className="flex gap-2 shrink-0 transition-colors hover:text-foreground">
           {github_link && (
@@ -86,7 +81,10 @@ export default function ProjectCard({
       {/* Bullet points */}
       <ul className="space-y-2">
         {bullets.map((point, idx) => (
-          <li key={idx} className="text-sm text-muted-foreground flex gap-3">
+          <li
+            key={idx}
+            className="text-sm text-muted-foreground flex gap-3 text-justify leading-relaxed"
+          >
             <span className="text-primary mt-0.5 shrink-0">•</span>
             <span>{point}</span>
           </li>

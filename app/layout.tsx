@@ -1,32 +1,38 @@
-import type React from "react";
 import type { Metadata } from "next";
+import type React from "react";
 
-import "./globals.css";
 import Navigation from "@/components/navigation";
+import { ThemeProvider } from "@/components/theme-provider";
+import { Manrope } from "next/font/google";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Manav Saliya - Full-Stack Developer",
   description:
     "Full-stack developer crafting fast, scalable, and user-focused web apps",
-  generator: "v0.app",
   icons: {
     icon: [
       {
-        url: "/icon-light-32x32.png",
+        url: "/images/profile.jpg",
         media: "(prefers-color-scheme: light)",
       },
       {
-        url: "/icon-dark-32x32.png",
+        url: "/images/profile.jpg",
         media: "(prefers-color-scheme: dark)",
       },
       {
-        url: "/icon.svg",
-        type: "image/svg+xml",
+        url: "/images/profile.jpg",
+        type: "image/jpg  ",
       },
     ],
     apple: "/apple-icon.png",
   },
 };
+
+const manrope = Manrope({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+});
 
 export default function RootLayout({
   children,
@@ -34,10 +40,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`font-sans antialiased`} cz-shortcut-listen="true">
-        <Navigation />
-        {children}
+    <html className={manrope.className} lang="en" suppressHydrationWarning>
+      <body className="antialiased" cz-shortcut-listen="true">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Navigation />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

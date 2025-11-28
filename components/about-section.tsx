@@ -3,7 +3,7 @@ import Section from "./section";
 export default function AboutSection() {
   return (
     <Section title="About Me">
-      <p className="text-base text-foreground leading-relaxed">
+      <p className="text-base text-foreground leading-relaxed text-justify">
         Hi, I'm a{" "}
         <span className="font-semibold text-primary">
           full-stack web developer
@@ -28,7 +28,7 @@ export default function AboutSection() {
         <span className="text-primary font-medium"> Laravel and Node.js</span>.
       </p>
       <br />
-      <p className="text-base text-foreground leading-relaxed">
+      <p className="text-base text-foreground leading-relaxed text-justify">
         My expertise includes integrating{" "}
         <span className="font-semibold">secure payment gateways</span>,
         implementing

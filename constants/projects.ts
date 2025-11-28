@@ -1,15 +1,16 @@
 export interface Project {
-  name: string
-  oneLiner: string
-  bullets: string[]
-  link?: string
-  github_link?: string
+  name: string;
+  oneLiner?: string;
+  bullets: string[];
+  link?: string;
+  github_link?: string;
 }
 
 export const PROJECTS: Project[] = [
   {
     name: "Cardeed",
-    oneLiner: "A full-stack car rental platform with payment processing, verification flows, and host payouts.",
+    oneLiner:
+      "A full-stack car rental platform with payment processing, verification flows, and host payouts.",
     bullets: [
       "Reduced image load time from 6–10s to 3–4s through batch image optimization and refactoring.",
       "Implemented Stripe wallet + customer balance, enabling seamless re-payments and flexible billing methods.",
@@ -28,14 +29,16 @@ export const PROJECTS: Project[] = [
     name: "Walkabout App",
     oneLiner: "Appointment scheduling system for pet care providers.",
     bullets: [
-      "Moved complex calendar index calculations to the backend and cached them, improving load time from 5–7s to 1–2s.",
+      "Moved complex calendar index calculations to the backend and cached them, reduce load time from 5–7s to 1–2s.",
       "Optimized multi-day appointment sorting to ensure clear and predictable UI rendering.",
       "Reduced app computation overhead by eliminating repetitive client-side operations.",
     ],
   },
   {
     name: "Cruizeo",
-    oneLiner: "Multi-host car rental SaaS with live GPS tracking and multi-gateway payments.",
+    oneLiner:
+      "Multi-host car rental SaaS with live GPS tracking and multi-gateway payments.",
+    link: "https://cruizeo.com",
     bullets: [
       "Built multi-host customer access logic enabling host-specific booking permissions.",
       "Integrated 6 payment gateways including Stripe, PayPal, Ezidebit, Square, Afterpay, and Eway for both recurring and one-time payments.",
@@ -53,12 +56,11 @@ export const PROJECTS: Project[] = [
       "Created production management dashboards and transaction-based reporting.",
     ],
   },
-]
+];
 
 export const OPENSOURCE: Project[] = [
   {
     name: "laravel/wayfinder",
-    oneLiner: "Added fully type-safe current-route detection with auto-suggestions.",
     bullets: [
       "Added fully type-safe current-route detection with auto-suggestions.",
       "Fixed multi-level nested query parameter resolution.",
@@ -68,11 +70,10 @@ export const OPENSOURCE: Project[] = [
   },
   {
     name: "laravel/react-starter-kit",
-    oneLiner: "Resolved theme-switching inconsistency by introducing resolvedAppearance.",
     bullets: [
       "Resolved theme-switching inconsistency by introducing resolvedAppearance, ensuring all components immediately reflect theme updates.",
       "Refactored codebase structure for clarity and performance.",
     ],
     github_link: "https://github.com/laravel/react-starter-kit",
   },
-]
+];

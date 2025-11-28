@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { SKILLS } from "@/constants/skills"
-import Section from "./section"
+import { SKILLS } from "@/constants/skills";
+import Section from "./section";
 
 export default function SkillsSection() {
   return (
@@ -10,12 +10,12 @@ export default function SkillsSection() {
         {SKILLS.map((skill) => (
           <span
             key={skill}
-            className="px-4 py-2 rounded-sm bg-muted text-muted-foreground text-sm transition-colors hover:bg-primary hover:text-primary-foreground cursor-default"
+            className="px-4 py-2 rounded-sm bg-muted text-muted-foreground text-sm transition-colors hover:bg-primary hover:text-primary-foreground cursor-default select-none"
           >
             {skill}
           </span>
         ))}
       </div>
     </Section>
-  )
+  );
 }

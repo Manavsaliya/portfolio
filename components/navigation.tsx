@@ -2,7 +2,9 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import ThemeSwitcher from "./theme-switcher";
+
+import dynamic from "next/dynamic";
+const ThemeSwitcher = dynamic(() => import("./theme-switcher"), { ssr: false });
 
 export default function Navigation() {
   const pathname = usePathname();
