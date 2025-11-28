@@ -1,0 +1,44 @@
+import type React from "react";
+import type { Metadata } from "next";
+
+import "./globals.css";
+import Navigation from "@/components/navigation";
+
+export const metadata: Metadata = {
+  title: "Manav Saliya - Full-Stack Developer",
+  description:
+    "Full-stack developer crafting fast, scalable, and user-focused web apps",
+  generator: "v0.app",
+  icons: {
+    icon: [
+      {
+        url: "/icon-light-32x32.png",
+        media: "(prefers-color-scheme: light)",
+      },
+      {
+        url: "/icon-dark-32x32.png",
+        media: "(prefers-color-scheme: dark)",
+      },
+      {
+        url: "/icon.svg",
+        type: "image/svg+xml",
+      },
+    ],
+    apple: "/apple-icon.png",
+  },
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en" suppressHydrationWarning>
+      <body className={`font-sans antialiased`} cz-shortcut-listen="true">
+        <Navigation />
+        {children}
+      </body>
+    </html>
+  );
+}

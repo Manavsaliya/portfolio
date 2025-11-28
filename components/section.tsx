@@ -1,0 +1,50 @@
+import clsx from "clsx";
+import type React from "react";
+
+interface SectionProps {
+  title?: string;
+  children: React.ReactNode;
+  className?: string;
+  isTop?: boolean;
+  isBottom?: boolean;
+}
+
+export default function Section({
+  title,
+  children,
+  className = "",
+  isTop = false,
+  isBottom = false,
+}: SectionProps) {
+  return (
+    <section
+      className={clsx("border-b border-border-lighter px-3", {
+        "border-t-0": true,
+        "border-b-0": isBottom,
+      })}
+    >
+      <div className="relative mx-auto max-w-3xl w-full border-x border-border-lighter sm:p-6 p-4">
+        {!isTop && (
+          <>
+            <div className="absolute top-0 left-0 w-2 h-2 bg-white dark:bg-black rounded-full border border-border -translate-x-1 -translate-y-1" />
+            <div className="absolute top-0 right-0 w-2 h-2 bg-white dark:bg-black rounded-full border border-border translate-x-1 -translate-y-1" />
+          </>
+        )}
+        {!isBottom && (
+          <>
+            <div className="absolute bottom-0 left-0 w-2 h-2 bg-white dark:bg-black rounded-full border border-border -translate-x-1 translate-y-1" />
+            <div className="absolute bottom-0 right-0 w-2 h-2 bg-white dark:bg-black rounded-full border border-border translate-x-1 translate-y-1" />
+          </>
+        )}
+        {title && (
+          <div className="relative">
+            <h2 className="text-xs font-semibold text-muted-foreground uppercase tracking-widest">
+              {title}
+            </h2>
+          </div>
+        )}
+        <div className={clsx(className, "py-6")}>{children}</div>
+      </div>
+    </section>
+  );
+}
