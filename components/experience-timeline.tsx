@@ -26,15 +26,15 @@ export default function ExperienceTimeline({
     switch (type) {
       case "start":
         return (
-          <div className="w-2.5 h-2.5 rounded-full border-2 border-foreground" />
+          <div className="w-2 h-2 rounded-full border-2 border-foreground" />
         );
       case "continue":
         return <div className="w-2 h-[1.6px] bg-foreground" />;
       case "end":
         return isTop ? (
-          <RiArrowUpLine size={19} className="text-foreground -mb-1" />
+          <RiArrowUpLine size={16} className="text-foreground -mb-1" />
         ) : (
-          <RiArrowDownLine size={19} className="text-foreground -mt-1" />
+          <RiArrowDownLine size={16} className="text-foreground -mt-1" />
         );
       default:
         return null;
@@ -44,7 +44,7 @@ export default function ExperienceTimeline({
   return (
     <div className="flex flex-col items-center w-5">
       {topType && renderPoint(topType, true)}
-      <div className="w-0.5 flex-1 bg-border" />
+      <div className="w-[1.6px] flex-1 bg-border" />
       {bottomType && renderPoint(bottomType)}
     </div>
   );

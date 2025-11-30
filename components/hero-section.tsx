@@ -22,7 +22,7 @@ const SOCIALS: {
   },
   {
     name: "GitHub",
-    href: "https://github.Manavsaliya",
+    href: "https://github.com/Manavsaliya",
     icon: RiGithubLine,
   },
   {

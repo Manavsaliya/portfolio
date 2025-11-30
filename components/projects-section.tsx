@@ -14,6 +14,7 @@ export default function ProjectsSection() {
           bullets={project.bullets}
           link={project.link}
           github_link={project.github_link}
+          isLast={project.isLast}
         />
       ))}
     </div>

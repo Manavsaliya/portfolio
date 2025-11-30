@@ -14,6 +14,7 @@ export default function OpenSourceSection() {
           bullets={project.bullets}
           github_link={project.github_link}
           link={project.link}
+          isLast={project.isLast}
         />
       ))}
     </div>

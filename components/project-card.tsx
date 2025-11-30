@@ -12,7 +12,7 @@ const Plus = () => {
       viewBox="0 0 24 24"
       fill="none"
       className="stroke-border"
-      strokeWidth="2"
+      strokeWidth="2.5"
       strokeLinecap="round"
       strokeLinejoin="round"
       aria-hidden="true"
@@ -29,21 +29,26 @@ export default function ProjectCard({
   bullets,
   link,
   github_link,
+  isLast,
 }: Project) {
   return (
     <div className="relative py-4 px-4 space-y-3 border-b border-x first:border-t border-border hover:bg-muted/40 dark:hover:bg-muted/20">
-      <div className="absolute -top-2 -left-2 text-muted-foreground text-xs">
+      <div className="absolute -top-[7.4px] -left-[7.5px] text-muted-foreground text-xs">
         <Plus />
       </div>
-      <div className="absolute -top-2 -right-2 text-muted-foreground text-xs">
+      <div className="absolute -top-[7.4px] -right-[7.5px] text-muted-foreground text-xs">
         <Plus />
       </div>
-      <div className="absolute -bottom-[19px] -left-2 text-muted-foreground text-xs">
-        <Plus />
-      </div>
-      <div className="absolute -bottom-[19px] -right-2 text-muted-foreground text-xs">
-        <Plus />
-      </div>
+      {isLast && (
+        <>
+          <div className="absolute -bottom-[19px] -left-2 text-muted-foreground text-xs">
+            <Plus />
+          </div>
+          <div className="absolute -bottom-[19px] -right-2 text-muted-foreground text-xs">
+            <Plus />
+          </div>
+        </>
+      )}
 
       <div className="flex items-start justify-between gap-3">
         <div className="flex-1">

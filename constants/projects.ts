@@ -4,6 +4,7 @@ export interface Project {
   bullets: string[];
   link?: string;
   github_link?: string;
+  isLast?: boolean;
 }
 
 export const PROJECTS: Project[] = [
@@ -48,6 +49,7 @@ export const PROJECTS: Project[] = [
   },
   {
     name: "Quarry Accounting System",
+    isLast: true,
     oneLiner: "Accounting and operations management system for stone quarries.",
     bullets: [
       "Developed income, expense, sales, and purchase modules with full ledger tracking.",
@@ -70,6 +72,7 @@ export const OPENSOURCE: Project[] = [
   },
   {
     name: "laravel/react-starter-kit",
+    isLast: true,
     bullets: [
       "Resolved theme-switching inconsistency by introducing resolvedAppearance, ensuring all components immediately reflect theme updates.",
       "Refactored codebase structure for clarity and performance.",

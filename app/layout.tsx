@@ -8,8 +8,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Manav Saliya - Full-Stack Developer",
-  description:
-    "Full-stack developer crafting fast, scalable, and user-focused web apps",
+  description: "Crafting modern web apps with Laravel, React & Next.js",
   icons: {
     icon: [
       {
@@ -22,10 +21,10 @@ export const metadata: Metadata = {
       },
       {
         url: "/images/profile.jpg",
-        type: "image/jpg  ",
+        type: "image/jpg",
       },
     ],
-    apple: "/apple-icon.png",
+    apple: "/images/profile.jpg",
   },
 };
 
