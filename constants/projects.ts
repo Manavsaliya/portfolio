@@ -49,13 +49,45 @@ export const PROJECTS: Project[] = [
   },
   {
     name: "Quarry Accounting System",
-    isLast: true,
     oneLiner: "Accounting and operations management system for stone quarries.",
     bullets: [
       "Developed income, expense, sales, and purchase modules with full ledger tracking.",
       "Added partner and shareholder balance management.",
       "Integrated OCR to extract truck number plates and weight-machine data.",
       "Created production management dashboards and transaction-based reporting.",
+    ],
+  },
+  {
+    name: "Luchila",
+    oneLiner: "Ecommerce sarees selling platform built using FleetCart CMS.",
+    // technologies: ["FleetCart CMS", "Laravel", "PHP", "JavaScript"],
+    bullets: [
+      "End-to-end video upload feature for rich product content.",
+      "Modular architecture improving maintainability and scalability.",
+      "Enhanced understanding of CMS workflows and extension.",
+    ],
+  },
+  {
+    name: "Attendance Manager",
+    oneLiner: "Staff attendance system with NFC card and face detection.",
+    // technologies: ["React", "Node.js", "Face Detection Package", "NFC", "JavaScript"],
+    link: "https://attendance.bytebuilders.co.in",
+    bullets: [
+      "Attendance tracking using NFC cards and face detection.",
+      "Leave management with admin approval and paid leave tracking.",
+      "Calculates average working hours, half-day and full-day attendance.",
+    ],
+  },
+  {
+    name: "Rayos Radiology",
+    oneLiner: "Doctors’ DICOM viewer website built with Laravel Filament.",
+    // technologies: ["Laravel", "Filament", "DICOM Viewer API", "PHP", "JavaScript"],
+    isLast: true,
+    link: "https://rayosradiology.com",
+    bullets: [
+      "Integrated open-source DICOM viewer API hosted on a remote server.",
+      "Interactive interface for doctors to view and analyze medical scans.",
+      "Appointment management for doctors and patients.",
     ],
   },
 ];

@@ -35,7 +35,7 @@ export default function Section({
             {title}
           </h2>
         )}
-        <div className={clsx(className, "py-6")}>{children}</div>
+        <div className={clsx(className, "pt-6")}>{children}</div>
       </div>
     </section>
   );
