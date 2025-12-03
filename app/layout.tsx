@@ -40,7 +40,7 @@ export default function RootLayout({
 }>) {
   return (
     <html className={manrope.className} lang="en" suppressHydrationWarning>
-      <body className="antialiased" cz-shortcut-listen="true">
+      <body className="antialiased min-w-[400px]" cz-shortcut-listen="true">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

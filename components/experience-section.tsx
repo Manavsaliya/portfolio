@@ -49,9 +49,9 @@ export default function ExperienceSection() {
                   {exp.bullets.map((bullet, idx) => (
                     <li
                       key={idx}
-                      className="text-sm text-foreground flex gap-3"
+                      className="text-sm text-foreground/90 flex gap-3 space-y-0.5"
                     >
-                      <span className="text-primary mt-0.5 shrink-0">•</span>
+                      <span className="text-primary/50 shrink-0">•</span>
                       <span>{bullet}</span>
                     </li>
                   ))}

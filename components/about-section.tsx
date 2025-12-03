@@ -3,7 +3,7 @@ import Section from "./section";
 export default function AboutSection() {
   return (
     <Section title="About Me">
-      <p className="text-base text-foreground leading-relaxed text-justify">
+      <p className="text-base text-primary/90 leading-relaxed text-justify">
         Crafting{" "}
         <span className="font-semibold text-primary">
           fast, reliable web solutions
@@ -16,7 +16,7 @@ export default function AboutSection() {
         to deliver experiences that users and teams enjoy.
       </p>
       <br />
-      <p className="text-base text-foreground leading-relaxed text-justify">
+      <p className="text-base text-primary/90 leading-relaxed text-justify">
         I also focus on{" "}
         <span className="font-semibold text-primary">
           smooth deployment processes

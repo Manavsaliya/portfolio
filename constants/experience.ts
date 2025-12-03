@@ -13,8 +13,8 @@ export const EXPERIENCE: Experience[] = [
     start_period: "2024-09-01",
     end_period: "current",
     bullets: [
-      "Led Cardeed car rental platform with live GPS tracking and multi-gateway payments.",
-      "Managed Cruizeo multi-host rental SaaS with real-time odometer and alerts.",
+      "Led Cardeed car rental platform with booking flows and UI improvements.",
+      "Led Cruizeo rental SaaS with 6 payment gateways and GPS live car tracking.",
       "Built Attendance Manager with NFC, face detection, and leave approval workflows.",
       "Developed Walkabout appointment system optimizing calendar backend logic.",
       "Implemented Stripe Connect for seamless host payouts and flexible billing.",
