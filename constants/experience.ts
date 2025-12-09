@@ -21,7 +21,7 @@ export const EXPERIENCE: Experience[] = [
       "Reduced image load times by 50% through batch optimization and refactoring.",
       "Integrated Checkr Trust identity verification to speed up customer approvals.",
       "Enhanced booking and car detail UI for improved clarity and conversions.",
-      "Added unified timelines for user, host, car, and booking real-time tracking.",
+      "Added timelines for user, host, car, and booking for better tracking.",
       "Improved rating system using caching and pagination for better performance.",
       "Implemented Redis caching, web push, and Firebase notifications for real-time updates.",
       "Built CI/CD pipeline reducing deployment time by 33% and improving reliability.",

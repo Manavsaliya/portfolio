@@ -17,7 +17,7 @@ export const PROJECTS: Project[] = [
       "Implemented Stripe wallet + customer balance, enabling seamless re-payments and flexible billing methods.",
       "Integrated Checkr Trust identity verification, lowering customer approval delays and preventing loss of thousands of potential signups.",
       "Refactored booking and car detail UI, improving clarity and increasing conversion.",
-      "Added unified timelines for users, hosts, cars, and bookings for real-time tracking.",
+      "Added unified timelines for users, hosts, cars, and bookings for better tracking.",
       "Improved rating system performance using caching + pagination, cutting load time significantly.",
       "Implemented Stripe Connect onboarding + payouts, enabling hosts to receive earnings directly in-platform.",
       "Reduced database resource consumption by 60% through query optimization.",
@@ -51,7 +51,7 @@ export const PROJECTS: Project[] = [
     name: "Quarry Accounting System",
     oneLiner: "Accounting and operations management system for stone quarries.",
     bullets: [
-      "Developed income, expense, sales, and purchase modules with full ledger tracking.",
+      "Developed income, expense, sales, and purchase modules with full ledger.",
       "Added partner and shareholder balance management.",
       "Integrated OCR to extract truck number plates and weight-machine data.",
       "Created production management dashboards and transaction-based reporting.",
