@@ -15,7 +15,7 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-xs">
+    <nav className="sticky top-0 z-50 border-b border-border-lighter bg-background/80 backdrop-blur-xs">
       <div className="mx-auto max-w-3xl px-6 py-4 flex items-center justify-between">
         <div className="flex gap-8 items-center flex-1">
           {navItems.map((item) => (

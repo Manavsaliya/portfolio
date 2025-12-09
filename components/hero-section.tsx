@@ -27,7 +27,7 @@ const SOCIALS: {
   },
   {
     name: "LinkedIn",
-    href: "https://linkedin.com/manavsaliya12",
+    href: "https://linkedin.com/in/manavsaliya12",
     icon: RiLinkedinLine,
   },
   {
@@ -44,10 +44,10 @@ export default function HeroSection() {
         <div className="shrink-0">
           <div className="relative select-none w-32 h-32 rounded-lg overflow-hidden border-2 border-border">
             <Image
-              src="/images/profile.jpg?height=128&width=128"
+              src="profile.png"
               alt="Manav Saliya"
               fill
-              className="object-cover pointer-events-none"
+              className="object-cover pointer-events-none scale-[120%] -translate-x-0.5"
             />
           </div>
         </div>

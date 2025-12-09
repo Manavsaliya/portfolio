@@ -12,19 +12,19 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: "/images/profile.jpg",
+        url: "favicon.png",
         media: "(prefers-color-scheme: light)",
       },
       {
-        url: "/images/profile.jpg",
+        url: "favicon.png",
         media: "(prefers-color-scheme: dark)",
       },
       {
-        url: "/images/profile.jpg",
+        url: "favicon.png",
         type: "image/jpg",
       },
     ],
-    apple: "/images/profile.jpg",
+    apple: "favicon.png",
   },
 };
 
